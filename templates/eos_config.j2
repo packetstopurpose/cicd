@@ -1,5 +1,6 @@
 ! Target Configuration for {{ inventory_hostname }}
 ! Base System & Services
+ip routing
 hostname {{ inventory_hostname }}
 dns domain {{ domain_name }}
 {% if dns_servers is defined %}
