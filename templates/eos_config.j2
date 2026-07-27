@@ -48,7 +48,9 @@ router bgp {{ bgp_asn }}
    {% for neighbor in bgp_neighbors %}
    neighbor {{ neighbor.ip }} remote-as {{ neighbor.remote_as }}
    neighbor {{ neighbor.ip }} description {{ neighbor.description }}
-   neighbor {{ neighbor.ip }} activate
+   !
+   address-family ipv4
+      neighbor {{ neighbor.ip }} activate
    {% endfor %}
    {% endif %}
 {% endif %}
