@@ -6,3 +6,5 @@ vlans:
     name: APP_DATA
   - id: 30
     name: DB_DATA
+  - id: 200
+    name: GUEST_WIFI
