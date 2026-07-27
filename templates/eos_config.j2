@@ -43,4 +43,12 @@ router bgp {{ bgp_asn }}
    router-id {{ router_id }}
 {% endif %}
    no bgp default ipv4-unicast
+
+   {% if bgp_neighbors is defined %}
+   {% for neighbor in bgp_neighbors %}
+   neighbor {{ neighbor.ip }} remote-as {{ neighbor.remote_as }}
+   neighbor {{ neighbor.ip }} description {{ neighbor.description }}
+   neighbor {{ neighbor.ip }} activate
+   {% endfor %}
+   {% endif %}
 {% endif %}
