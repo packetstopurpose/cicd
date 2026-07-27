@@ -8,5 +8,5 @@ vlans:
     name: DB_DATA
   - id: 200
     name: GUEST_WIFI
-  - id: 9999
-    name: BAD_VLAN
+  - id: 400
+    name: USERS
