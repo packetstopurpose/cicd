@@ -12,3 +12,8 @@ dns_servers:
 
 ntp_servers:
   - 172.20.20.1
+
+# Guest WiFi Network
+vlan_200:
+  id: 200
+  name: GUEST_WIFI
