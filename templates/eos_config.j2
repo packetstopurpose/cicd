@@ -39,6 +39,7 @@ vlan {{ vlan.id }}
 ! BGP Routing Engine
 {% if bgp_asn is defined %}
 router bgp {{ bgp_asn }}
+   no shutdown
 {% if router_id is defined %}
    router-id {{ router_id }}
 {% endif %}
