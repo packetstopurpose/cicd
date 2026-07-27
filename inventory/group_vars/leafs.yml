@@ -8,3 +8,5 @@ vlans:
     name: DB_DATA
   - id: 200
     name: GUEST_WIFI
+  - id: 400
+    name: USERS
